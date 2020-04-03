@@ -1,0 +1,12 @@
+var MongoClient = require('mongodb').MongoClient;
+var dataBaseName = "chikoo"
+var url = "mongodb://localhost:3000/": dataBaseName;
+
+MongoClient.connect(url, function(err, client) {
+if (err) throw err;
+var db = client.db(dataBaseName);
+//create a collection name called "intern";
+db.createCollection("interns collection created");
+client.close();
+});
+};
